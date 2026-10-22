@@ -1,0 +1,43 @@
+"Đừng vội, cứ đi từng bước, rồi bạn sẽ đến nơi thôi 🚶",
+      "Chúc bạn có một buổi sáng đầy năng lượng và một ly cà phê ngon ☕",
+      "Bạn xứng đáng được hạnh phúc, nhớ yêu thương bản thân nhé 🤗",
+      "Chúc bạn gặp nhiều người tốt và làm được nhiều điều mình thích 🌼",
+      "Nụ cười của bạn có thể làm sáng cả một ngày của người khác 😄",
+      "Chúc mọi lo lắng tan biến, chỉ còn lại niềm vui và bình yên 🕊️",
+      "Cố lên nhé, những điều tốt đẹp đang trên đường đến với bạn 🚀",
+      "Chúc bạn thi tốt, làm tốt và luôn tự tin vào chính mình 📚",
+      "Mong hôm nay bạn nhận được một tin vui bất ngờ 🎉",
+      "Dù hôm nay mệt, hãy nhớ nghỉ ngơi một chút, bạn đã cố gắng nhiều rồi 🛋️",
+      "Chúc bạn luôn khỏe mạnh, bình an và được yêu thương mỗi ngày ❤️",
+      "Cuộc sống có thể bận rộn, nhưng đừng quên dành thời gian cho niềm vui nhỏ 🍰",
+      "Chúc bạn một ngày thật tươi như hoa và rạng rỡ như nắng 🌻",
+      "Hãy tin rằng ngày mai sẽ còn đẹp hơn hôm nay 🌅",
+      "Chúc bạn mọi việc suôn sẻ, vạn sự như ý 🧧",
+      "Cảm ơn bạn đã ghé thăm, chúc bạn thật nhiều niềm vui nhé! 💐"
+    ];
+
+    function loiChucMoi() {
+      const i = Math.floor(Math.random() * loiChuc.length);
+      document.getElementById("loi").textContent = loiChuc[i];
+
+      const hoa = ["💐", "🌹", "🌷", "🌻", "🌸"];
+      const qua = document.getElementById("qua");
+      qua.textContent = hoa[Math.floor(Math.random() * hoa.length)];
+      qua.classList.remove("pop");
+      void qua.offsetWidth;
+      qua.classList.add("pop");
+
+      for (let k = 0; k < 15; k++) {
+        const b = document.createElement("span");
+        b.className = "roi";
+        b.textContent = hoa[Math.floor(Math.random() * hoa.length)];
+        b.style.left = Math.random() * 100 + "vw";
+        b.style.animationDelay = Math.random() * 1 + "s";
+
+        document.body.appendChild(b);
+        setTimeout(() => b.remove(), 4500);
+      }
+    }
+  </script>
+</body>
+</html>
